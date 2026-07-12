@@ -1,4 +1,5 @@
 name = "emg-it-corporate-training-llc"
+compatibility_date = "2026-07-12"
 main = "workers-site/index.js"
 
 [site]
