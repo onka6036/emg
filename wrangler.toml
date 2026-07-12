@@ -1,5 +1,8 @@
 name = "emg-it-corporate-training-llc"
-type = "javascript"
+main = "workers-site/index.js"
 
 [site]
   bucket = "./public"
+
+[build]
+  command = "python export_static.py"

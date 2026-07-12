@@ -6,6 +6,9 @@
     "build": "python export_static.py",
     "deploy": "npm run build && npx wrangler deploy"
   },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.1.0"
+  },
   "devDependencies": {
     "wrangler": "^4.110.0"
   }
