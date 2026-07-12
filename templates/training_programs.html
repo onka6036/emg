@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Training Programs{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Training Programs</h1>
+    <p class="section-intro">Explore immersive and practical training options tailored to business and individual learners.</p>
+    <div class="grid cards-3">
+      {% for course in courses %}
+      <div class="card">
+        <div class="badge">{{ course.category }}</div>
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.overview }}</p>
+        <p><strong>Duration:</strong> {{ course.duration }}</p>
+        <p><strong>Requirements:</strong> {{ course.requirements }}</p>
+        <p><strong>Learning Outcomes:</strong> {{ course.learning_outcomes }}</p>
+        <p><strong>Certification:</strong> {{ course.certification }}</p>
+        <a class="btn btn-primary" href="{{ url_for('book_training') }}">Enroll</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

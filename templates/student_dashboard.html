@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Student Dashboard</h1>
+    <div class="card">
+      <h3>My Bookings</h3>
+      <table class="table">
+        <thead><tr><th>Course</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+        <tbody>
+          {% for booking in bookings %}
+          <tr><td>{{ booking.course_title }}</td><td>{{ booking.booking_date }}</td><td>{{ booking.booking_time }}</td><td>{{ booking.status }}</td></tr>
+          {% else %}
+          <tr><td colspan="4">No bookings yet.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

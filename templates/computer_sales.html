@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Computer Sales{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Computer Sales</h1>
+    <p class="section-intro">Reliable technology solutions for offices, schools, creatives, and home users.</p>
+    <div class="grid cards-3">
+      <div class="card"><h3>Desktop PCs</h3><p>Performance desktops for business and productivity.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+      <div class="card"><h3>Laptops</h3><p>Portable systems for field teams and modern workstyles.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+      <div class="card"><h3>Monitors</h3><p>High-resolution displays for professionals and creative work.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+      <div class="card"><h3>Accessories</h3><p>Keyboards, peripherals, webcams, and more.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+      <div class="card"><h3>Networking Equipment</h3><p>Routers, switches, access points, and secure connectivity.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+      <div class="card"><h3>Printers</h3><p>Reliable printing and document solutions for teams.</p><a class="btn btn-secondary" href="{{ url_for('contact') }}">Request Quote</a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

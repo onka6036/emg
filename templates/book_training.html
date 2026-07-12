@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Book Training{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="form-card">
+      <h1 class="section-title">Book Training</h1>
+      <p class="section-intro">Request a class, select a date and time, and our team will confirm the booking.</p>
+      <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <label>{{ form.course_title.label }}</label>
+          {{ form.course_title() }}
+        </div>
+        <div class="form-group">
+          <label>{{ form.trainer.label }}</label>
+          {{ form.trainer() }}
+        </div>
+        <div class="form-group">
+          <label>{{ form.booking_date.label }}</label>
+          {{ form.booking_date() }}
+        </div>
+        <div class="form-group">
+          <label>{{ form.booking_time.label }}</label>
+          {{ form.booking_time() }}
+        </div>
+        <div class="form-group">
+          <label>{{ form.training_type.label }}</label>
+          {{ form.training_type() }}
+        </div>
+        <div class="form-group">
+          <label>{{ form.notes.label }}</label>
+          {{ form.notes(rows=5) }}
+        </div>
+        <button class="btn btn-primary" type="submit">Request Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

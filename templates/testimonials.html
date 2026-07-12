@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Testimonials{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Testimonials</h1>
+    <div class="grid cards-3">
+      {% for item in items %}
+      <div class="card">
+        <p>“{{ item.content }}”</p>
+        <strong>{{ item.author }}</strong>
+        <div>{{ item.role }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

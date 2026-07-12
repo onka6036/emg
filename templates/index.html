@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block title %}EMG IT Corporate Training LLC | Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="badge" style="background: rgba(255,255,255,.15); color: white;">Premium Corporate Technology Training</p>
+      <h1>Train. Learn. Succeed.</h1>
+      <p>Build skills, boost careers, and drive success with hands-on IT training, computer sales, repairs, and corporate support services.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="btn btn-primary" href="{{ url_for('book_training') }}">Book Training</a>
+        <a class="btn btn-secondary" href="{{ url_for('contact') }}">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Why EMG IT?</h3>
+      <ul>
+        <li>Certified instructors and modern curriculum</li>
+        <li>On-site, remote, and corporate training</li>
+        <li>Sales and repair support for businesses</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container stats">
+    <div class="stat"><strong>120+</strong><br>Training Programs</div>
+    <div class="stat"><strong>500+</strong><br>Graduates</div>
+    <div class="stat"><strong>80+</strong><br>Corporate Clients</div>
+    <div class="stat"><strong>15+</strong><br>Years Experience</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Featured Services</h2>
+    <p class="section-intro">Trusted support for training, technology, and business operations.</p>
+    <div class="grid cards-3">
+      {% for service in services %}
+      <div class="card">
+        <div class="badge">{{ service.name }}</div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--gray);">
+  <div class="container">
+    <h2 class="section-title">Training Categories</h2>
+    <div class="grid cards-3">
+      {% for course in featured_courses %}
+      <div class="card">
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.overview }}</p>
+        <p><strong>Duration:</strong> {{ course.duration }}</p>
+        <a class="btn btn-secondary" href="{{ url_for('training_programs') }}">Learn More</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose EMG</h2>
+    <div class="grid cards-3">
+      <div class="card"><h3>Expert Instructors</h3><p>Industry professionals with practical, hands-on expertise.</p></div>
+      <div class="card"><h3>Flexible Delivery</h3><p>On-site, remote, or hybrid training that fits your schedule.</p></div>
+      <div class="card"><h3>Business Focused</h3><p>Programs designed to increase productivity and professional growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--gray);">
+  <div class="container">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="grid cards-3">
+      {% for item in testimonials %}
+      <div class="card">
+        <p>“{{ item.content }}”</p>
+        <strong>{{ item.author }}</strong><br>
+        <span>{{ item.role }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest Blog Posts</h2>
+    <div class="grid cards-3">
+      {% for post in blog_posts %}
+      <div class="card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content[:140] }}...</p>
+        <a href="{{ url_for('blog_post', slug=post.slug) }}">Read More</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--gray);">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="grid cards-2">
+      {% for faq in faqs %}
+      <div class="card"><h3>{{ faq.question }}</h3><p>{{ faq.answer }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

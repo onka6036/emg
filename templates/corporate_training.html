@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Corporate Training{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Corporate Training</h1>
+    <p class="section-intro">Tailored training programs that help teams build technical and leadership capabilities.</p>
+    <div class="grid cards-2">
+      <div class="card"><h3>Customized Employee Training</h3><p>Programs aligned with your business goals, industry, and team skills.</p></div>
+      <div class="card"><h3>On-site Training</h3><p>Delivered at your location for hands-on instruction and team collaboration.</p></div>
+      <div class="card"><h3>Remote Training</h3><p>Interactive virtual sessions with live support and applied learning.</p></div>
+      <div class="card"><h3>Business Consultation</h3><p>We help design learning roadmaps and training packages that scale.</p></div>
+    </div>
+    <div class="form-card">
+      <h3>Request Proposal</h3>
+      <form action="{{ url_for('contact') }}" method="post">
+        <div class="form-group"><label>Name</label><input name="name" required></div>
+        <div class="form-group"><label>Email</label><input name="email" type="email" required></div>
+        <div class="form-group"><label>Company</label><input name="phone"></div>
+        <div class="form-group"><label>Project Needs</label><textarea name="message" rows="4"></textarea></div>
+        <button class="btn btn-primary" type="submit">Request Proposal</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

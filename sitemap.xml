@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://127.0.0.1:5000/</loc></url>
+  <url><loc>http://127.0.0.1:5000/about</loc></url>
+  <url><loc>http://127.0.0.1:5000/training-programs</loc></url>
+  <url><loc>http://127.0.0.1:5000/corporate-training</loc></url>
+  <url><loc>http://127.0.0.1:5000/computer-sales</loc></url>
+  <url><loc>http://127.0.0.1:5000/computer-repairs</loc></url>
+  <url><loc>http://127.0.0.1:5000/book-training</loc></url>
+  <url><loc>http://127.0.0.1:5000/contact</loc></url>
+  <url><loc>http://127.0.0.1:5000/blog</loc></url>
+</urlset>

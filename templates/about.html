@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}About EMG IT{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">About EMG IT Corporate Training LLC</h1>
+    <p class="section-intro">We deliver premium technology training, support, and consulting solutions that help organizations grow with confidence.</p>
+    <div class="grid cards-2">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To empower learners and businesses with modern technical skills and reliable support.</p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To become the trusted partner for corporate training, IT support, and technology services.</p>
+      </div>
+    </div>
+    <div class="grid cards-3" style="margin-top: 1.5rem;">
+      {% for member in team %}
+      <div class="card">
+        <h3>{{ member.name }}</h3>
+        <p><strong>{{ member.role }}</strong></p>
+        <p>{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
