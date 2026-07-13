@@ -1,7 +1,7 @@
-# EMG IT Corporate Training LLC Website
+# JBM Corporate Training LLC Website
 
 ## Overview
-This project is a production-ready Flask web application for EMG IT Corporate Training LLC. It includes marketing pages, course catalog, training booking, authentication, admin dashboard, and a SQLite-backed database.
+This project is a production-ready Flask web application for JBM Corporate Training LLC. It includes marketing pages, course catalog, training booking, authentication, admin dashboard, and a SQLite-backed database.
 
 ## Features
 - Responsive modern corporate website
